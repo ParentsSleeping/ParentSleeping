@@ -9,13 +9,13 @@ public class TriggerStay : MonoBehaviour
 
    private void OnTriggerStay(Collider other) {       
        if(other.tag=="Player"&&this.tag=="loaf"){
-           other.SendMessage("takeNoise",Time.deltaTime*30);
+           other.SendMessage("takeNoise",Time.deltaTime*200);
        }
       
    }
    private void OnTriggerExit(Collider other) {
        if(other.tag=="Player"){
-           other.SendMessage("healNoise",Time.deltaTime*30);
+           other.SendMessage("healNoise",Time.deltaTime*70);
        }
    }
 }
