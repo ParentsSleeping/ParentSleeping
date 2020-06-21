@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.Threading;
 
-public class VolumeBar : MonoBehaviour
+public class Bars : MonoBehaviour
 {
     public Image currentVolumeBar;
     public Text ratioText;
@@ -78,7 +78,7 @@ private void OnCollisionEnter(Collision collision){
     if (collision.gameObject.tag == "Rabbit")
         {
             Debug.Log("Text: " + "Rabbit");
-          InvokeRepeating("doWork", 0f, 4.0f);
+          InvokeRepeating("doWork", 0f, 0.05f);
         }
         else if(collision.gameObject.tag == "RabbitTop")
         {
@@ -97,17 +97,7 @@ public void TakeDamage(int damage)
     }
 
     public void doWork(){
-        Debug.Log("Text: " + "DisplayTimeEvent");
-        
-             if (currentHealth < 1)
-            { 
-                SceneManager.LoadScene("GameOver");
-            }
-            else
-            {
-                TakeDamage(1);
-            }
-        
+        takeNoise(Time.deltaTime*200);
        
     }
  
