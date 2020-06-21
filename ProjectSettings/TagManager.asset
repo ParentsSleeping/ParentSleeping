@@ -10,6 +10,7 @@ TagManager:
   - Rabbit
   - Floor
   - RabbitTop
+  - loaf
   layers:
   - Default
   - TransparentFX
