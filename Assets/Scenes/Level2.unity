@@ -5547,7 +5547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461777242}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d26603c1afd5e1c4c9ed8d225ea19db8, type: 3}
   m_Name: 
@@ -5570,6 +5570,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVolumeBar: {fileID: 1508103831}
   ratioText: {fileID: 1420146748}
+  maxHealth: 5
+  currentHealth: 0
+  healthBar: {fileID: 1365885002}
+  Rabbit: {fileID: 1530617850}
 --- !u!1 &1508103829
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class VolumeBar : MonoBehaviour
 {
-public Image currentVolumeBar;
-public Text ratioText;
-private float hitPoint=0;
-private float maxHitPoint=150;
-private bool isTouching=false;
+    public Image currentVolumeBar;
+    public Text ratioText;
+    private float hitPoint=0;
+    private float maxHitPoint=150;
+    private bool isTouching=false;
+
+    public int maxHealth = 5;
+	public int currentHealth;
+    private Timer timer1; 
+	public HealthBar healthBar;
+    public GameObject Rabbit;
 
 private void Start() {
     UpdateVolumeBar();
+
+    Debug.Log("Text: " + "start");
+    currentHealth = maxHealth;
+	healthBar.SetMaxHealth(maxHealth);
 }
 
 private void Update() {
@@ -25,6 +38,20 @@ private void UpdateVolumeBar() {
     float ratio=hitPoint/maxHitPoint;
     currentVolumeBar.rectTransform.localScale=new Vector3(ratio,1,1);
     ratioText.text=(ratio*100).ToString()+'%';
+
+    if(hitPoint>=maxHitPoint){
+        hitPoint/=2;
+        if (currentHealth < 1)
+            { 
+                SceneManager.LoadScene("GameOver");
+            }
+            else
+            {
+                TakeDamage(1);
+            } 
+            ratio/=2;
+    }
+    
 }
 
 private void healNoise(float noise){
@@ -46,5 +73,42 @@ private void takeNoise(float silence){
         UpdateVolumeBar();
 
 }
+
+private void OnCollisionEnter(Collision collision){
+    if (collision.gameObject.tag == "Rabbit")
+        {
+            Debug.Log("Text: " + "Rabbit");
+          InvokeRepeating("doWork", 0f, 4.0f);
+        }
+        else if(collision.gameObject.tag == "RabbitTop")
+        {
+            Destroy(collision.gameObject);
+            Destroy(Rabbit);
+            CancelInvoke("doWork");
+        }
+}
+
+public void TakeDamage(int damage)
+	{
+        Debug.Log("Text: " + "TakeDamage");
+		currentHealth -= damage;
+		healthBar.SetHealth(currentHealth);
+        
+    }
+
+    public void doWork(){
+        Debug.Log("Text: " + "DisplayTimeEvent");
+        
+             if (currentHealth < 1)
+            { 
+                SceneManager.LoadScene("GameOver");
+            }
+            else
+            {
+                TakeDamage(1);
+            }
+        
+       
+    }
  
 }
