@@ -14,4 +14,8 @@ public class ButtonsScript : MonoBehaviour
     public void Back(){
         SceneManager.LoadScene("Start");
     }
+    public void Next1(){
+        Debug.Log("nahamaaaaaa");
+        SceneManager.LoadScene("Level2");
+    }
 }
