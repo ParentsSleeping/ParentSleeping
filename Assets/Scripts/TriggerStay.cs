@@ -15,7 +15,7 @@ public class TriggerStay : MonoBehaviour
             flag=false;
             InvokeRepeating("playSound", 0f, 0.4f);
         }
-           other.SendMessage("takeNoise",Time.deltaTime*500);
+           other.SendMessage("takeNoise",Time.deltaTime*300);
        } else if(other.tag=="Player"&&this.tag=="carpet"){
         if(flag){
             flag=false;

@@ -4133,19 +4133,19 @@ MonoBehaviour:
   slider: {fileID: 949059215}
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.93725497, g: 0.058823533, b: 0.11764707, a: 1}
+    key1: {r: 0.9476299, g: 1, b: 0.009433985, a: 1}
+    key2: {r: 0, g: 0.9433962, b: 0.09882495, a: 0}
+    key3: {r: 0, g: 0.9433962, b: 0.09882495, a: 0}
+    key4: {r: 0, g: 0.9433962, b: 0.09882495, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
+    ctime0: 20316
+    ctime1: 40632
+    ctime2: 48380
+    ctime3: 60331
+    ctime4: 65535
     ctime5: 0
     ctime6: 0
     ctime7: 0
@@ -4157,9 +4157,10 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 2
+    m_Mode: 1
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 2
+  fill: {fileID: 489943738}
 --- !u!114 &949059215
 MonoBehaviour:
   m_ObjectHideFlags: 0
