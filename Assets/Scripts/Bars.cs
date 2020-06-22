@@ -37,7 +37,7 @@ private void Update() {
 private void UpdateVolumeBar() {
     float ratio=hitPoint/maxHitPoint;
     currentVolumeBar.rectTransform.localScale=new Vector3(ratio,1,1);
-    ratioText.text=(ratio*100).ToString()+'%';
+    ratioText.text=(ratio*100).ToString("0")+'%';
 
     if(hitPoint>=maxHitPoint){
         hitPoint/=2;

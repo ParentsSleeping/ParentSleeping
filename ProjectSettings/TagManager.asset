@@ -11,6 +11,7 @@ TagManager:
   - Floor
   - RabbitTop
   - loaf
+  - carpet
   layers:
   - Default
   - TransparentFX
