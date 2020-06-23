@@ -795,6 +795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e26ecd196fa4108b146e93fa16fd6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endscrn: {fileID: 535690086}
+  estoryscrn: {fileID: 535690086}
 --- !u!1 &1234437027
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e26ecd196fa4108b146e93fa16fd6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endscrn: {fileID: 535690086}
+  estoryscrn: {fileID: 535690086}
 --- !u!1 &1456610462
 GameObject:
   m_ObjectHideFlags: 0

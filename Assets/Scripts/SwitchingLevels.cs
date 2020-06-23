@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class SwitchingLevels : MonoBehaviour
 {
+    // private string[] levels={"Level1",};
     public string levelName;
-    public GameObject endscrn;
+     public GameObject endscrn;
 
     void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player"))
         {  
-            endscrn.gameObject.SetActive(true);
-
             //SceneManager.LoadScene(levelName);
+            endscrn.gameObject.SetActive(true);
         }
     }
     
