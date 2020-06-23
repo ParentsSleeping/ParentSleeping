@@ -22,6 +22,12 @@ public class TriggerStay : MonoBehaviour
             InvokeRepeating("playSound", 0f, 0.4f);
         }
            other.SendMessage("takeNoise",Time.deltaTime*100);
+       }else if(other.tag=="Player"&&this.tag=="Present"){
+        if(flag){
+            flag=false;
+            InvokeRepeating("playSound", 0f, 0.4f);
+        }
+           other.SendMessage("takeNoise",Time.deltaTime*100);
        }
       
    }

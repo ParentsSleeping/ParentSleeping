@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class SwitchingLevels : MonoBehaviour
+public class finishScrip : MonoBehaviour
 {
-    // private string[] levels={"Level1",};
-    public GameObject endscrn;
-
+    // Start is called before the first frame update
     void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player"))
         {  
-            endscrn.gameObject.SetActive(true);
+            SceneManager.LoadScene("Finish");
         }
     }
-    
 }

@@ -33,10 +33,6 @@ public class ButtonsScript : MonoBehaviour
         SceneManager.LoadScene("Level3");
     }
     public void Next3(){
-        SceneManager.LoadScene("Finish");
+        SceneManager.LoadScene("Level4");
     }
-
-    // public void Next2(){
-    //     SceneManager.LoadScene("Level3");
-    // }
 }
